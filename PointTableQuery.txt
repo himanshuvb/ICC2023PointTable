@@ -1,0 +1,16 @@
+﻿
+
+with all_matches as (
+select team, sum(matches_played) as matches_played, sum(win_flag) as wins from
+(
+select team_1 as team, count(*) as matches_played
+, sum(case when team_1=winner then 1 else 0 end) as win_flag
+from icc_world_cup group by team_1
+union all
+select team_2 as team, count(*) as matches_played
+, sum(case when team_2=winner then 1 else 0 end) as win_flag from icc_world_cup group by team_2) A
+group by team
+)
+select*, matches_played-wins as losses, wins*2 as pts
+from all_matches
+order by wins desc,losses;
