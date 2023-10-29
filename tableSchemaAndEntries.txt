@@ -33,4 +33,4 @@ INSERT INTO icc_world_cup values(25,'ENG','SL','SL');
 INSERT INTO icc_world_cup values(26,'PAK','SA','SA');
 INSERT INTO icc_world_cup values(27,'AUS','NZ','AUS');
 INSERT INTO icc_world_cup values(28,'NED','BAN','NED');
-INSERT INTO icc_world_cup values(28,'NED','BAN','DRAW');
+INSERT INTO icc_world_cup values(29,'NED','BAN','DRAW');
